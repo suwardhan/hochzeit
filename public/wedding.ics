@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Hochzeit Antonia & Suwardhan//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:hochzeit-antonia-suwardhan-2027@hochzeit
+DTSTAMP:20260218T120000Z
+DTSTART;VALUE=DATE:20270211
+DTEND;VALUE=DATE:20270212
+SUMMARY:Hochzeit Antonia & Suwardhan
+DESCRIPTION:Traditionelle indische Hochzeitszeremonie. Dhadane\, Indien. Anreise/Abreise und Unterkunft (9.–10. Feb) von uns organisiert.
+LOCATION:Dhadane, India
+END:VEVENT
+END:VCALENDAR
