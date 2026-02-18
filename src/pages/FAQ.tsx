@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '@/context/LanguageContext'
 import { Button } from '@/components/ui/button'
@@ -12,6 +13,10 @@ function WhatsAppIcon() {
 
 export function FAQ() {
   const { t, faqItems } = useLanguage()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className="min-h-screen px-4 pt-0 pb-6 sm:px-6 sm:pb-10 md:px-8">
