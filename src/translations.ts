@@ -7,7 +7,7 @@ export const langLabels: Record<Lang, string> = {
   mr: 'मराठी',
 }
 
-type FAQItem = { q: string; a: string }
+type FAQItem = { q: string; a: string | string[] }
 
 type Translations = {
   landing: {
@@ -41,8 +41,8 @@ type Translations = {
 
 function faqDe(): FAQItem[] {
   return [
-    { q: 'Wann und wo findet die Hochzeit statt?', a: 'Die traditionelle indische Hochzeitszeremonie ist am 11. Februar 2027 in Dhadane, Indien. Anreise aus Mumbai zur Hochzeitslocation (8.–9. Februar) und Abreise zurück nach Mumbai (12. Februar) werden von uns organisiert und übernommen.' },
-    { q: 'Was ist der Ablauf?', a: '08.–09. Februar: Anreise von Mumbai zur Hochzeitslocation (von uns organisiert). 09. Februar: Mehandi der Braut. 10. Februar: Halad-Zeremonie und Feier. 11. Februar: Traditionelle indische Hochzeitszeremonie. 12. Februar: Abreise zurück nach Mumbai (von uns organisiert). Die Unterkunft in den Nächten vom 9. und 10. Februar wird von uns organisiert und übernommen.' },
+    { q: 'Wann und wo findet die Hochzeit statt?', a: 'Die indische Hochzeitszeremonie ist am 11. Februar 2027 in Dhadane, Indien. Anreise aus Mumbai zur Hochzeitslocation (8.–9. Februar) und Abreise zurück nach Mumbai (12. Februar) werden von uns organisiert und übernommen.' },
+    { q: 'Was ist der Ablauf?', a: ['08.–09. Februar: Anreise von Mumbai zur Hochzeitslocation (von uns organisiert).', '09. Februar: Mehandi der Braut.', '10. Februar: Halad-Zeremonie und Feier.', '11. Februar: Indische Hochzeitszeremonie.', '12. Februar: Abreise zurück nach Mumbai (von uns organisiert).', 'Die Unterkunft in den Nächten vom 9. und 10. Februar wird von uns organisiert und übernommen.'] },
     { q: 'Brauche ich ein Visum für Indien?', a: 'Ja. Deutsche Staatsbürger benötigen für die Einreise nach Indien ein Visum. Ihr könnt ein e-Visa online beantragen (touristisch oder für Veranstaltungen). Antrag über die offizielle indische e-Visa-Webseite stellen; Bearbeitung dauert meist wenige Tage. Reisepass sollte noch mindestens 6 Monate gültig sein. Bei Fragen helfen wir gern.' },
     { q: 'Was erwartet mich als Gast aus Deutschland?', a: 'Indien ist bunt, lebhaft und anders als Deutschland: mehr Menschen, mehr Gerüche und Geräusche, andere Essgewohnheiten. An der Hochzeitslocation rechnet mit Temperaturen um 30–34 °C. Die Zeremonien sind traditionell und farbenfroh. Wir freuen uns, euch unsere Kultur ein Stück näherzubringen.' },
     { q: 'Unterkunft und Übernachtung', a: 'Die Übernachtungen in den Nächten vom 9. und 10. Februar an der Hochzeitslocation werden von uns organisiert und übernommen. Ihr müsst euch darum nicht kümmern.' },
@@ -68,7 +68,7 @@ export const translations: Record<Lang, Translations> = {
       calendarGoogle: 'Google Calendar / Android',
       calendarApple: 'Apple Calendar / iPhone',
       faqTitle: 'FAQ',
-      faqDesc: 'Visa, travel, accommodation and more for guests from Germany.',
+      faqDesc: 'Visa, travel, accommodation and more for guests from outside India.',
       faqButton: 'View FAQ',
       contactTitle: 'Questions? Contact:',
       contactAntonia: 'WhatsApp Antonia +49 171 29 59 624',
@@ -77,12 +77,12 @@ export const translations: Record<Lang, Translations> = {
     faq: {
       back: 'Back',
       title: 'FAQ',
-      subtitle: 'Info for guests from Germany: visa, travel, accommodation and what to expect.',
+      subtitle: 'Info for guests from outside India: visa, travel, accommodation and what to expect.',
       moreQuestions: 'More questions?',
       backToHome: 'Back to home',
       items: [
-        { q: 'When and where is the wedding?', a: 'The traditional Indian wedding ceremony is on 11 February 2027 in Dhadane, India. Travel from Mumbai to the venue (8–9 February) and back to Mumbai (12 February) is organised and covered by us.' },
-        { q: 'What is the schedule?', a: '8–9 Feb: Travel from Mumbai to the venue (organised by us). 9 Feb: Bride’s Mehendi. 10 Feb: Halad ceremony and celebration. 11 Feb: Traditional Indian wedding ceremony. 12 Feb: Return to Mumbai (organised by us). Accommodation on the nights of 9 and 10 February is organised and covered by us.' },
+        { q: 'When and where is the wedding?', a: 'The Indian wedding ceremony is on 11 February 2027 in Dhadane, India. Travel from Mumbai to the venue (8–9 February) and back to Mumbai (12 February) is organised and covered by us.' },
+        { q: 'What is the schedule?', a: ['8–9 Feb: Travel from Mumbai to the venue (organised by us).', '9 Feb: Bride\'s Mehendi.', '10 Feb: Halad ceremony and celebration.', '11 Feb: Indian wedding ceremony.', '12 Feb: Return to Mumbai (organised by us).', 'Accommodation on the nights of 9 and 10 February is organised and covered by us.'] },
         { q: 'Do I need a visa for India?', a: 'Yes. German citizens need a visa to enter India. You can apply for an e-Visa online (tourist or for events). Apply via the official Indian e-Visa website; processing usually takes a few days. Your passport should be valid for at least 6 months. We’re happy to help if you have questions.' },
         { q: 'What can I expect as a guest from Germany?', a: 'India is colourful, lively and different from Germany: more people, more sounds and smells, different food. At the venue expect temperatures around 30–34 °C. The ceremonies are traditional and colourful. We look forward to sharing our culture with you.' },
         { q: 'Accommodation', a: 'Accommodation on the nights of 9 and 10 February at the venue is organised and covered by us. You don’t need to arrange anything.' },
@@ -107,7 +107,7 @@ export const translations: Record<Lang, Translations> = {
       calendarGoogle: 'Google Calendar / Android',
       calendarApple: 'Apple Kalender / iPhone',
       faqTitle: 'Häufige Fragen',
-      faqDesc: 'Visa, Anreise, Unterkunft und mehr für Gäste aus Deutschland.',
+      faqDesc: 'Visa, Anreise, Unterkunft und mehr für Gäste von außerhalb Indiens.',
       faqButton: 'FAQ ansehen',
       contactTitle: 'Fragen? Kontakt:',
       contactAntonia: 'WhatsApp Antonia +49 171 29 59 624',
@@ -116,7 +116,7 @@ export const translations: Record<Lang, Translations> = {
     faq: {
       back: 'Zurück',
       title: 'Häufige Fragen',
-      subtitle: 'Infos für Gäste aus Deutschland: Visa, Anreise, Unterkunft und was euch erwartet.',
+      subtitle: 'Infos für Gäste von außerhalb Indiens: Visa, Anreise, Unterkunft und was euch erwartet.',
       moreQuestions: 'Weitere Fragen?',
       backToHome: 'Zurück zur Startseite',
       items: faqDe(),
@@ -136,7 +136,7 @@ export const translations: Record<Lang, Translations> = {
       calendarGoogle: 'Google Calendar / Android',
       calendarApple: 'Apple Calendar / iPhone',
       faqTitle: 'अक्सर पूछे जाने वाले प्रश्न',
-      faqDesc: 'जर्मनी से मेहमानों के लिए वीज़ा, यात्रा, रुकने की जगह।',
+      faqDesc: 'भारत के बाहर के मेहमानों के लिए वीज़ा, यात्रा, रुकने की जगह।',
       faqButton: 'FAQ देखें',
       contactTitle: 'सवाल? संपर्क:',
       contactAntonia: 'WhatsApp Antonia +49 171 29 59 624',
@@ -145,12 +145,12 @@ export const translations: Record<Lang, Translations> = {
     faq: {
       back: 'वापस',
       title: 'अक्सर पूछे जाने वाले प्रश्न',
-      subtitle: 'जर्मनी से मेहमानों के लिए: वीज़ा, यात्रा, रुकने की जगह और क्या उम्मीद करें।',
+      subtitle: 'भारत के बाहर के मेहमानों के लिए: वीज़ा, यात्रा, रुकने की जगह और क्या उम्मीद करें।',
       moreQuestions: 'और सवाल?',
       backToHome: 'वापस होम पर',
       items: [
-        { q: 'शादी कब और कहाँ है?', a: 'पारंपरिक भारतीय विवाह समारोह 11 फरवरी 2027 को धाडणे, भारत में है। मुंबई से वेन्यू तक (8–9 फरवरी) और वापस मुंबई (12 फरवरी) की यात्रा हम आयोजित और वहन करेंगे।' },
-        { q: 'कार्यक्रम क्या है?', a: '8–9 फरवरी: मुंबई से वेन्यू तक यात्रा। 9 फरवरी: दुल्हन की मेहंदी। 10 फरवरी: हलद समारोह और जश्न। 11 फरवरी: पारंपरिक भारतीय विवाह। 12 फरवरी: मुंबई वापसी। 9 और 10 फरवरी की रातों में ठहरने का इंतजाम हम करेंगे।' },
+        { q: 'शादी कब और कहाँ है?', a: 'भारतीय विवाह समारोह 11 फरवरी 2027 को धाडणे, भारत में है। मुंबई से वेन्यू तक (8–9 फरवरी) और वापस मुंबई (12 फरवरी) की यात्रा हम आयोजित और वहन करेंगे।' },
+        { q: 'कार्यक्रम क्या है?', a: ['8–9 फरवरी: मुंबई से वेन्यू तक यात्रा।', '9 फरवरी: दुल्हन की मेहंदी।', '10 फरवरी: हलद समारोह और जश्न।', '11 फरवरी: भारतीय विवाह।', '12 फरवरी: मुंबई वापसी।', '9 और 10 फरवरी की रातों में ठहरने का इंतजाम हम करेंगे।'] },
         { q: 'भारत के लिए वीज़ा चाहिए?', a: 'हाँ। जर्मन नागरिकों को भारत में प्रवेश के लिए वीज़ा चाहिए। आप ऑनलाइन e-Visa ले सकते हैं। पासपोर्ट कम से कम 6 महीने वैध होना चाहिए।' },
         { q: 'जर्मनी से मेहमान के रूप में क्या उम्मीद करें?', a: 'भारत रंगीन और जीवंत है। वेन्यू पर तापमान लगभग 30–34 °C। समारोह पारंपरिक और रंगीन होंगे।' },
         { q: 'ठहरने की जगह', a: '9 और 10 फरवरी की रातों में वेन्यू पर ठहरने का इंतजाम हम करेंगे।' },
@@ -175,7 +175,7 @@ export const translations: Record<Lang, Translations> = {
       calendarGoogle: 'Google Calendar / Android',
       calendarApple: 'Apple Calendar / iPhone',
       faqTitle: 'वारंवार विचारलेले प्रश्न',
-      faqDesc: 'जर्मनीहून पाहुण्यांसाठी व्हिसा, प्रवास, राहण्याची व्यवस्था.',
+      faqDesc: 'भारताबाहेरून पाहुण्यांसाठी व्हिसा, प्रवास, राहण्याची व्यवस्था.',
       faqButton: 'FAQ पहा',
       contactTitle: 'प्रश्न? संपर्क:',
       contactAntonia: 'WhatsApp Antonia +49 171 29 59 624',
@@ -184,12 +184,12 @@ export const translations: Record<Lang, Translations> = {
     faq: {
       back: 'मागे',
       title: 'वारंवार विचारलेले प्रश्न',
-      subtitle: 'जर्मनीहून पाहुण्यांसाठी: व्हिसा, प्रवास, राहणे आणि काय अपेक्षित आहे.',
+      subtitle: 'भारताबाहेरून पाहुण्यांसाठी: व्हिसा, प्रवास, राहणे आणि काय अपेक्षित आहे.',
       moreQuestions: 'अजून प्रश्न?',
       backToHome: 'मुख्यपृष्ठावर परत',
       items: [
-        { q: 'लग्न कधी आणि कुठे?', a: 'पारंपरिक भारतीय विवाह 11 फेब्रुवारी 2027 रोजी धाडणे, भारतात. मुंबईहून वेन्यू पर्यंत (8–9 फेब्रुवारी) आणि परत मुंबई (12 फेब्रुवारी) प्रवास आम्ही आयोजित करतो.' },
-        { q: 'कार्यक्रम काय आहे?', a: '8–9 फेब्रुवारी: मुंबईहून वेन्यू पर्यंत. 9: मेहेंदी. 10: हळद समारोह. 11: पारंपरिक लग्न. 12: मुंबई परत. 9 आणि 10 फेब्रुवारी रात्री राहण्याची व्यवस्था आम्ही करतो.' },
+        { q: 'लग्न कधी आणि कुठे?', a: 'भारतीय विवाह 11 फेब्रुवारी 2027 रोजी धाडणे, भारतात. मुंबईहून वेन्यू पर्यंत (8–9 फेब्रुवारी) आणि परत मुंबई (12 फेब्रुवारी) प्रवास आम्ही आयोजित करतो.' },
+        { q: 'कार्यक्रम काय आहे?', a: ['8–9 फेब्रुवारी: मुंबईहून वेन्यू पर्यंत.', '9: मेहेंदी.', '10: हळद समारोह.', '11: लग्न.', '12: मुंबई परत.', '9 आणि 10 फेब्रुवारी रात्री राहण्याची व्यवस्था आम्ही करतो.'] },
         { q: 'भारतासाठी व्हिसा लागतो?', a: 'होय. जर्मन नागरिकांना भारतात प्रवेशासाठी व्हिसा लागतो. ऑनलाइन e-Visa घेता येते. पासपोर्ट किमान 6 महिने वैध असावा.' },
         { q: 'जर्मनीहून पाहुणे म्हणून काय अपेक्षित?', a: 'भारत रंगीत आणि जिवंत. वेन्यूवर तापमान सुमारे 30–34 °C. समारोह पारंपरिक आणि रंगीत.' },
         { q: 'राहण्याची व्यवस्था', a: '9 आणि 10 फेब्रुवारी रात्री वेन्यूवर राहण्याची व्यवस्था आम्ही करतो.' },

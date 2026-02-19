@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '@/context/LanguageContext'
 import { Button } from '@/components/ui/button'
+import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 
 const RSVP_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfeKje-JKp1PyzRgT6FtymTQEM5B516aAhEhgxDsxOTLci_jQ/viewform?usp=dialog'
 const GOOGLE_CALENDAR_URL = 'https://calendar.google.com/calendar/u/0?cid=YmQzZWU0M2IxZTY1YTE3MTk4ZWMxYjc1Y2YyMGU1NjFmMDM0NDBhMzgwMGRjNGQyYzZjMjhiZDM5MWMzZDZkNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t'
@@ -9,9 +10,9 @@ export function Landing() {
   const { t } = useLanguage()
 
   return (
-    <div className="min-h-screen px-4 py-6 sm:px-6 sm:py-10 md:px-8">
+    <div className="min-h-screen -mt-[200px] -mb-[120px] px-4 py-6 sm:px-6 sm:py-10 md:px-8">
       <div className="mx-auto max-w-lg space-y-8">
-        <section className="glass rounded-3xl p-6 sm:p-8 text-center">
+        <section className="rounded-3xl p-6 sm:p-8 text-center bg-transparent border-transparent shadow-none backdrop-blur-none">
           <img
             src={`${import.meta.env.BASE_URL}couple.png`}
             alt={t('landing.heroTitle')}
@@ -30,6 +31,12 @@ export function Landing() {
             {t('landing.heroPlace')}
           </p>
         </section>
+
+        <div className="flex justify-center">
+          <div className="glass rounded-2xl px-3 py-2 sm:px-4 sm:py-2.5">
+            <LanguageSwitcher />
+          </div>
+        </div>
 
         <section className="glass rounded-3xl p-6 sm:p-8">
           <h2 className="text-lg font-semibold text-slate-800 sm:text-xl">{t('landing.rsvpTitle')}</h2>

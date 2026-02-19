@@ -1,7 +1,7 @@
 import { useLanguage } from '@/context/LanguageContext'
 import { langLabels, type Lang } from '@/translations'
 
-const LANGS: Lang[] = ['en', 'de', 'hi', 'mr']
+const LANGS: Lang[] = ['en', 'de', 'mr', 'hi']
 
 export function LanguageSwitcher() {
   const { lang, setLang } = useLanguage()

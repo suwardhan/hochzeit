@@ -18,26 +18,18 @@
   }
 }
 
-/* Animated gradient background – full hue spectrum */
-.bg-gradient-move {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
+/* Animated background gradient – light tints from SVG maroon */
+.bg-gradient-bg {
   background: linear-gradient(
     135deg,
-    #fce7f3 0%,
-    #fbcfe8 8%,
-    #fde68a 16%,
-    #bbf7d0 24%,
-    #a5f3fc 32%,
-    #c7d2fe 40%,
-    #e9d5ff 48%,
-    #fce7f3 56%,
-    #fde68a 64%,
-    #bbf7d0 72%,
-    #a5f3fc 80%,
-    #e9d5ff 88%,
-    #fce7f3 100%
+    #fefafa 0%,
+    #fcf4f5 15%,
+    #faf0f1 30%,
+    #f8ecee 45%,
+    #f6e8eb 60%,
+    #f4e6e9 75%,
+    #f2e4e7 90%,
+    #fefafa 100%
   );
   background-size: 400% 400%;
   animation: gradient-shift 18s ease infinite;

@@ -21,7 +21,7 @@ type LanguageContextValue = {
   lang: Lang
   setLang: (l: Lang) => void
   t: (key: string) => string
-  faqItems: { q: string; a: string }[]
+  faqItems: { q: string; a: string | string[] }[]
 }
 
 const LanguageContext = createContext<LanguageContextValue | null>(null)

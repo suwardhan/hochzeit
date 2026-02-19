@@ -42,9 +42,17 @@ export function FAQ() {
               <h2 className="text-base font-semibold text-slate-800 sm:text-lg">
                 {faq.q}
               </h2>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
-                {faq.a}
-              </p>
+              {Array.isArray(faq.a) ? (
+                <ul className="mt-2 list-inside list-disc space-y-1 text-sm leading-relaxed text-slate-600 sm:text-base">
+                  {faq.a.map((line, j) => (
+                    <li key={j}>{line}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
+                  {faq.a}
+                </p>
+              )}
             </section>
           ))}
         </div>
