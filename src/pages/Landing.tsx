@@ -26,7 +26,7 @@ export function Landing() {
   const { t } = useLanguage()
 
   return (
-    <div className="min-h-screen -mt-[320px] -mb-[120px] px-4 py-6 sm:px-6 sm:py-10 md:px-8">
+    <div className="min-h-screen -mt-[280px] -mb-[120px] px-4 py-6 sm:px-6 sm:py-10 md:px-8">
       <div className="mx-auto max-w-lg space-y-8">
         <section className="rounded-3xl p-6 sm:p-8 text-center bg-transparent border-transparent shadow-none backdrop-blur-none">
           <img
