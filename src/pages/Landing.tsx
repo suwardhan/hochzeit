@@ -26,13 +26,13 @@ export function Landing() {
   const { t } = useLanguage()
 
   return (
-    <div className="min-h-screen -mt-[200px] -mb-[120px] px-4 py-6 sm:px-6 sm:py-10 md:px-8">
+    <div className="min-h-screen -mt-[320px] -mb-[120px] px-4 py-6 sm:px-6 sm:py-10 md:px-8">
       <div className="mx-auto max-w-lg space-y-8">
         <section className="rounded-3xl p-6 sm:p-8 text-center bg-transparent border-transparent shadow-none backdrop-blur-none">
           <img
             src={`${import.meta.env.BASE_URL}couple.png`}
             alt={t('landing.heroTitle')}
-            className="mx-auto h-48 w-48 rounded-2xl object-cover sm:h-56 sm:w-56"
+            className="mx-auto h-40 w-40 rounded-2xl object-cover sm:h-56 sm:w-56"
           />
           <h1 className="mt-4 font-serif text-2xl font-semibold tracking-tight text-slate-800 sm:text-3xl">
             {t('landing.heroTitle')}
@@ -71,7 +71,7 @@ export function Landing() {
           <p className="mt-1 text-sm text-slate-600 sm:text-base">
             {t('landing.calendarDesc')}
           </p>
-          <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:gap-4">
+          <div className="mt-4 flex flex-col gap-3">
             <a
               href={GOOGLE_CALENDAR_URL}
               target="_blank"
