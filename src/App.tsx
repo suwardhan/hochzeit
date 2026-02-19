@@ -5,7 +5,6 @@ import { Landing } from './pages/Landing'
 import { FAQ } from './pages/FAQ'
 
 const topBgUrl = `${import.meta.env.BASE_URL}top.svg`
-const bottomBgUrl = `${import.meta.env.BASE_URL}bottom.svg`
 
 export default function App() {
   const { pathname } = useLocation()
@@ -35,17 +34,6 @@ export default function App() {
             <Route path="/faq" element={<FAQ />} />
           </Route>
         </Routes>
-        {showSvgBorders && (
-          <div
-            className="min-h-[50vh] bg-no-repeat bg-bottom pb-4 pl-4 pr-4"
-            style={{
-              backgroundImage: `url(${bottomBgUrl})`,
-              backgroundPosition: '16px bottom',
-              backgroundSize: 'calc(100% - 32px) auto',
-            }}
-            aria-hidden
-          />
-        )}
       </LanguageProvider>
     </>
   )
