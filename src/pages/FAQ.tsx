@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '@/context/LanguageContext'
+import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { Button } from '@/components/ui/button'
 
 function WhatsAppIcon() {
@@ -25,6 +26,9 @@ export function FAQ() {
           <Link to="/" className="btn-glass rounded-xl px-4 py-2 text-sm text-slate-700 no-underline">
             ← {t('faq.back')}
           </Link>
+          <div className="glass rounded-2xl px-3 py-2 sm:px-4 sm:py-2.5">
+            <LanguageSwitcher languages={['en', 'de']} />
+          </div>
         </div>
 
         <section className="glass rounded-3xl p-6 sm:p-8">
@@ -49,9 +53,14 @@ export function FAQ() {
                   ))}
                 </ul>
               ) : (
-                <p className="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
-                  {faq.a}
-                </p>
+                <div className="mt-2 space-y-2 text-sm leading-relaxed text-slate-600 sm:text-base">
+                  {(typeof faq.a === 'string' && faq.a.includes('\n\n')
+                    ? faq.a.split('\n\n')
+                    : [faq.a]
+                  ).map((para, j) => (
+                    <p key={j}>{para}</p>
+                  ))}
+                </div>
               )}
             </section>
           ))}

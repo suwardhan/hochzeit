@@ -1,14 +1,20 @@
 import { useLanguage } from '@/context/LanguageContext'
 import { langLabels, type Lang } from '@/translations'
 
-const LANGS: Lang[] = ['en', 'de', 'mr', 'hi']
+const ALL_LANGS: Lang[] = ['en', 'de', 'mr', 'hi']
 
-export function LanguageSwitcher() {
+interface LanguageSwitcherProps {
+  /** If set, only these languages are shown. Default: all languages. */
+  languages?: Lang[]
+}
+
+export function LanguageSwitcher({ languages = ALL_LANGS }: LanguageSwitcherProps) {
   const { lang, setLang } = useLanguage()
+  const langs = languages
 
   return (
     <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-2" role="group" aria-label="Language">
-      {LANGS.map((l) => (
+      {langs.map((l) => (
         <button
           key={l}
           type="button"
