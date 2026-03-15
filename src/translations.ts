@@ -20,8 +20,7 @@ type Translations = {
     rsvpButton: string
     calendarTitle: string
     calendarDesc: string
-    calendarGoogle: string
-    calendarApple: string
+    calendarButton: string
     faqTitle: string
     faqDesc: string
     faqButton: string
@@ -64,9 +63,8 @@ export const translations: Record<Lang, Translations> = {
       rsvpDesc: 'Please let us know if you can join us.',
       rsvpButton: 'Open RSVP form',
       calendarTitle: 'Add to calendar',
-      calendarDesc: 'Add the wedding to your calendar.',
-      calendarGoogle: 'Calendar for Android',
-      calendarApple: 'Calendar for iPhone',
+      calendarDesc: 'Subscribe to get event details, travel, and accommodation info. More details to come.',
+      calendarButton: 'Subscribe to calendar',
       faqTitle: 'FAQ',
       faqDesc: 'Visa, travel, accommodation and more for guests from outside India.',
       faqButton: 'View FAQ',
@@ -103,9 +101,8 @@ export const translations: Record<Lang, Translations> = {
       rsvpDesc: 'Bitte gebt uns Bescheid, ob ihr dabei seid.',
       rsvpButton: 'Zur RSVP-Umfrage',
       calendarTitle: 'Termin im Kalender',
-      calendarDesc: 'Fügt die Hochzeit zu eurem Kalender hinzu.',
-      calendarGoogle: 'Kalender für Android',
-      calendarApple: 'Kalender für iPhone',
+      calendarDesc: 'Abonniert den Kalender für Termine, Anreise und Unterkunft. Weitere Infos folgen.',
+      calendarButton: 'Kalender abonnieren',
       faqTitle: 'Häufige Fragen',
       faqDesc: 'Visa, Anreise, Unterkunft und mehr für Gäste von außerhalb Indiens.',
       faqButton: 'FAQ ansehen',
@@ -132,9 +129,8 @@ export const translations: Record<Lang, Translations> = {
       rsvpDesc: 'कृपया बताएं कि आप आ सकते हैं।',
       rsvpButton: 'RSVP फॉर्म खोलें',
       calendarTitle: 'कैलेंडर में जोड़ें',
-      calendarDesc: 'शादी को अपने कैलेंडर में जोड़ें।',
-      calendarGoogle: 'Calendar for Android',
-      calendarApple: 'Calendar for iPhone',
+      calendarDesc: 'इवेंट डिटेल्स, यात्रा और ठहरने की जानकारी के लिए सब्सक्राइब करें। और जानकारी जल्द।',
+      calendarButton: 'कैलेंडर सब्सक्राइब करें',
       faqTitle: 'अक्सर पूछे जाने वाले प्रश्न',
       faqDesc: 'भारत के बाहर के मेहमानों के लिए वीज़ा, यात्रा, रुकने की जगह।',
       faqButton: 'FAQ देखें',
@@ -171,9 +167,8 @@ export const translations: Record<Lang, Translations> = {
       rsvpDesc: 'कृपया सांगा की तुम्ही येणार का.',
       rsvpButton: 'RSVP फॉर्म उघडा',
       calendarTitle: 'कॅलेंडरात जोडा',
-      calendarDesc: 'लग्न तुमच्या कॅलेंडरात जोडा.',
-      calendarGoogle: 'Calendar for Android',
-      calendarApple: 'Calendar for iPhone',
+      calendarDesc: 'इव्हेंट तपशील, प्रवास आणि राहण्याची माहिती मिळवण्यासाठी सब्सक्राइब करा. अधिक माहिती लवकरच.',
+      calendarButton: 'कॅलेंडर सब्सक्राइब करा',
       faqTitle: 'वारंवार विचारलेले प्रश्न',
       faqDesc: 'भारताबाहेरून पाहुण्यांसाठी व्हिसा, प्रवास, राहण्याची व्यवस्था.',
       faqButton: 'FAQ पहा',

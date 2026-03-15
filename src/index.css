@@ -48,8 +48,26 @@
 @layer components {
   .glass {
     @apply backdrop-blur-xl border border-white/40;
-    background: hsl(220 20% 100% / 0.6);
+    background: hsl(220 20% 100% / 0.9);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  }
+  /* Gradient border wrapper for glass sections */
+  .glass-gradient-border {
+    padding: 2px;
+    border-radius: 1.5rem;
+    background: linear-gradient(
+      135deg,
+      rgba(190, 140, 150, 0.85) 0%,
+      rgba(120, 110, 130, 0.75) 25%,
+      rgba(100, 115, 140, 0.7) 50%,
+      rgba(120, 110, 130, 0.75) 75%,
+      rgba(190, 140, 150, 0.85) 100%
+    );
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  }
+  .glass-gradient-border > .glass {
+    border: none;
+    border-radius: calc(1.5rem - 2px);
   }
   .glass-dark {
     @apply backdrop-blur-xl border border-white/30;
