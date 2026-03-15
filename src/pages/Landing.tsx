@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 
 const RSVP_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfeKje-JKp1PyzRgT6FtymTQEM5B516aAhEhgxDsxOTLci_jQ/viewform?usp=dialog'
-const CALENDAR_ICAL_URL = 'https://calendar.google.com/calendar/ical/j4iqkk960bk4u1g7pi18ct4g3g%40group.calendar.google.com/public/basic.ics'
+const CALENDAR_ICAL_URL = 'https://calendar.google.com/calendar/ical/bd3ee43b1e65a17198ec1b75cf20e561f03440a3800dc4d2c6c28bd391c3d6d4%40group.calendar.google.com/public/basic.ics'
 
 export function Landing() {
   const { t } = useLanguage()
@@ -46,10 +46,13 @@ export function Landing() {
             <p className="mt-1 text-sm text-slate-600 sm:text-base">
               {t('landing.rsvpDesc')}
             </p>
-            <a href={RSVP_URL} target="_blank" rel="noopener noreferrer" className="mt-4 block">
-              <Button size="lg" className="w-full">
-                {t('landing.rsvpButton')}
-              </Button>
+            <a
+              href={RSVP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 block inline-flex items-center justify-center gap-2 rounded-xl font-medium transition-all duration-200 btn-glass text-slate-800 hover:bg-white/90 h-12 px-8 text-lg w-full"
+            >
+              {t('landing.rsvpButton')}
             </a>
           </section>
         </div>
@@ -63,11 +66,9 @@ export function Landing() {
             href={CALENDAR_ICAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 block"
+            className="mt-4 block inline-flex items-center justify-center gap-2 rounded-xl font-medium transition-all duration-200 btn-glass text-slate-800 hover:bg-white/90 h-12 px-8 text-lg w-full"
           >
-            <Button size="lg" className="w-full">
-              {t('landing.calendarButton')}
-            </Button>
+            {t('landing.calendarButton')}
           </a>
         </section>
 
