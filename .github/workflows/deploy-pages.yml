@@ -33,7 +33,8 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          VITE_BASE_PATH: '/hochzeit/'
+          # Use root base path for custom domain (hochzeit.life); use '/hochzeit/' for *.github.io
+          VITE_BASE_PATH: '/'
 
       - name: Fix SPA routing (copy index.html → 404.html)
         run: cp dist/index.html dist/404.html
